@@ -50,7 +50,7 @@ To run Stripe in development:
 ### Extra Notes
 
 To get ready for production, this command creates a build directory with a 
-roduction build of your app.
+production build of the web app.
 
 `npm run build`
 

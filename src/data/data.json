@@ -1,0 +1,194 @@
+{
+  "products": [
+    {
+      "_id": { "$oid": "6333659cd0cb00bcbfab6a34" },
+      "productId": "2",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664341905/forest/6333659cd0cb00bcbfab6a34.svg",
+      "name": "Saguero Cactus",
+      "description": "This cactus is typically grown in the desert and will survive in dry seasons.",
+      "price": { "$numberDecimal": "20" },
+      "createdAt": { "$date": "2022-09-27T21:05:32Z" },
+      "lastModified": { "$date": "2022-09-27T21:05:32Z" }
+    },
+    {
+      "_id": { "$oid": "6333dafd64bbcd16661e6e7e" },
+      "productId": "2",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664341893/forest/6333dafd64bbcd16661e6e7e.svg",
+      "name": "Fig Leaf",
+      "description": "A plant with vibrant green leaves with a strong and sturyd stem. ",
+      "price": { "$numberDecimal": "24.00" },
+      "createdAt": { "$date": "2022-09-28T05:26:21Z" },
+      "lastModified": { "$date": "2022-09-28T05:26:21Z" }
+    },
+    {
+      "_id": { "$oid": "6333dc9364bbcd16661e6e7f" },
+      "productId": "3",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664341857/forest/6333dc9364bbcd16661e6e7f.svg",
+      "name": "Succulent",
+      "description": "This plant absorbs water from its stems and can be preserved in areas with high temperatures and low rainfall.",
+      "price": { "$numberDecimal": "16.00" },
+      "createdAt": { "$date": "2022-09-28T05:33:07Z" },
+      "lastModified": { "$date": "2022-09-28T05:33:07Z" }
+    },
+    {
+      "_id": { "$oid": "6333ddf40ea2bd0e1a20c995" },
+      "productId": "4",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664341840/forest/6333ddf40ea2bd0e1a20c995.svg",
+      "name": "Monstera",
+      "description": "A plant that can grow large evergreen leaves. Their roots will grow into the soil to protect the plant.",
+      "price": { "$numberDecimal": "18.00" },
+      "createdAt": { "$date": "2022-09-28T05:39:00Z" },
+      "lastModified": { "$date": "2022-09-28T05:39:00Z" }
+    },
+    {
+      "_id": { "$oid": "633b225f983036bf409ab349" },
+      "productId": "4",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820366/forest/633b225f983036bf409ab349.svg",
+      "name": "ZZ Plant",
+      "description": "The ZZ Plant is a good addition to any interrior rooms. It is a perfect fit for homes or offices. It is an indoor foliage plant.",
+      "price": { "$numberDecimal": "42.00" },
+      "createdAt": { "$date": "2022-10-03T17:56:47Z" },
+      "lastModified": { "$date": "2022-10-03T17:56:47Z" }
+    },
+    {
+      "_id": { "$oid": "633b24d4983036bf409ab34a" },
+      "productId": "5",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820367/forest/633b24d4983036bf409ab34a.svg",
+      "name": "Spider Plant",
+      "description": "A soil based plant that requires bright to moderate indirect sunlight. Do not leave spider plants in direct, hot sunlight.",
+      "price": { "$numberDecimal": "28.00" },
+      "createdAt": { "$date": "2022-10-03T18:07:16Z" },
+      "lastModified": { "$date": "2022-10-03T18:07:16Z" }
+    },
+    {
+      "_id": { "$oid": "633b259f983036bf409ab34b" },
+      "productId": "6",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664819927/forest/633b259f983036bf409ab34b.svg",
+      "name": "Calathea Undulata",
+      "description": "A tropical plant that is most notable for their wide, green, colorful leaves. This plant is non-toxic to both pets and humans. ",
+      "price": { "$numberDecimal": "14.00" },
+      "createdAt": { "$date": "2022-10-03T18:10:39Z" },
+      "lastModified": { "$date": "2022-10-03T18:10:39Z" }
+    },
+    {
+      "_id": { "$oid": "633b27ad983036bf409ab34d" },
+      "productId": "7",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820029/forest/633b27ad983036bf409ab34d.svg",
+      "name": "Devil's Ivy",
+      "description": "The devil's ivy is a vine that has yellow marbled leaves. It is known to climb trees with its vines. Warning this plant is toxic to both dogs and cats.",
+      "price": { "$numberDecimal": "18.00" },
+      "createdAt": { "$date": "2022-10-03T18:19:25Z" },
+      "lastModified": { "$date": "2022-10-03T18:19:25Z" }
+    },
+    {
+      "_id": { "$oid": "633b29b2983036bf409ab34f" },
+      "productId": "8",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820028/forest/633b29b2983036bf409ab34f.svg",
+      "name": "Chinese Money Plant",
+      "description": "This plant is most notable for its flat round green leaves. This Southwest Chinese plant is a low maintenance plant and symbolizes good luck and fortune to its owner. ",
+      "price": { "$numberDecimal": "16.00" },
+      "createdAt": { "$date": "2022-10-03T18:28:02Z" },
+      "lastModified": { "$date": "2022-10-03T18:28:02Z" }
+    },
+    {
+      "_id": { "$oid": "633b2b1f983036bf409ab350" },
+      "productId": "9",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820125/forest/633b2b1f983036bf409ab350.svg",
+      "name": "Ludisia Discolor",
+      "description": "The Ludisia discolor or Jewel Orchid is a house plant that requires medium light levels and moderate watering. This plant also thrives in warm rooms. ",
+      "price": { "$numberDecimal": "10.00" },
+      "createdAt": { "$date": "2022-10-03T18:34:07Z" },
+      "lastModified": { "$date": "2022-10-03T18:34:07Z" }
+    },
+    {
+      "_id": { "$oid": "633e44a5c3c2cf6473ef572e" },
+      "productId": "8",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820125/forest/633e44a5c3c2cf6473ef572e.svg",
+      "name": "Rubber Fig",
+      "description": "A house plant that grows large aerial roots. It is natively found in the sub-tropical parts of the world. This plant should be placed near bright light. Direct sunshine should be avoided. ",
+      "price": { "$numberDecimal": "35.00" },
+      "createdAt": { "$date": "2022-10-06T02:59:49Z" },
+      "lastModified": { "$date": "2022-10-06T02:59:49Z" }
+    },
+    {
+      "_id": { "$oid": "633e4683c3c2cf6473ef572f" },
+      "productId": "9",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820192/forest/633e4683c3c2cf6473ef572f.svg",
+      "name": "Guiana Chestnut",
+      "description": "The Guiana Chestnut also commonly known as the money tree is native to Central and South America. This plant is very easy to take care of. ",
+      "price": { "$numberDecimal": "60.00" },
+      "createdAt": { "$date": "2022-10-06T03:07:47Z" },
+      "lastModified": { "$date": "2022-10-06T03:07:47Z" }
+    },
+    {
+      "_id": { "$oid": "633e496dc3c2cf6473ef5731" },
+      "productId": "10",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820261/forest/633e496dc3c2cf6473ef5731.svg",
+      "name": "Red Aglaonema Plant",
+      "description": "The red aglaonema is most notable for its bright red and green leaves. This plant needs to be watered roughly every 5 to 7 days. Make sure to keep the soil moist and do not overwater.",
+      "price": { "$numberDecimal": "20.00" },
+      "createdAt": { "$date": "2022-10-06T03:20:13Z" },
+      "lastModified": { "$date": "2022-10-06T03:20:13Z" }
+    },
+    {
+      "_id": { "$oid": "633e4a4fc3c2cf6473ef5732" },
+      "productId": "11",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820306/forest/633e4a4fc3c2cf6473ef5732.svg",
+      "name": "Phragmites Australis",
+      "description": "This plant is a common reed and it is usually found in wetlands.  They can typically grow up to 6 meters tall.  ",
+      "price": { "$numberDecimal": "18.00" },
+      "createdAt": { "$date": "2022-10-06T03:23:59Z" },
+      "lastModified": { "$date": "2022-10-06T03:23:59Z" }
+    },
+    {
+      "_id": { "$oid": "633e4be3c3c2cf6473ef5733" },
+      "productId": "12",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820272/forest/633e4be3c3c2cf6473ef5733.svg",
+      "name": "Strelitzia Nicolai",
+      "description": "This plant is also known as the Giant White Bird of Paradise or Wild Banana. It is is native to South Africa. This plant requires bright light from the sun and regular watering.  ",
+      "price": { "$numberDecimal": "25.00" },
+      "createdAt": { "$date": "2022-10-06T03:30:43Z" },
+      "lastModified": { "$date": "2022-10-06T03:30:43Z" }
+    },
+    {
+      "_id": { "$oid": "633e4d0fc3c2cf6473ef5735" },
+      "productId": "13",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820360/forest/633e4d0fc3c2cf6473ef5735.svg",
+      "name": "Garden Tulip",
+      "description": "Tulips have cup-shaped flowers at the tip of their stems. These flowers are perfectly symetrical. Tulips need to be watered at least once a week.  ",
+      "price": { "$numberDecimal": "14.00" },
+      "createdAt": { "$date": "2022-10-06T03:35:43Z" },
+      "lastModified": { "$date": "2022-10-06T03:35:43Z" }
+    },
+    {
+      "_id": { "$oid": "633e4e10c3c2cf6473ef5736" },
+      "productId": "14",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820305/forest/633e4e10c3c2cf6473ef5736.svg",
+      "name": "Peacock Plant",
+      "description": "This plant's name derives from their leaves and their odd resemblance to that of a peacock's tail. This plant typically grows 1-2' tall. They are usually found in eastern Brazil. ",
+      "price": { "$numberDecimal": "25.00" },
+      "createdAt": { "$date": "2022-10-06T03:40:00Z" },
+      "lastModified": { "$date": "2022-10-06T03:40:00Z" }
+    },
+    {
+      "_id": { "$oid": "633e4fb0c3c2cf6473ef5738" },
+      "productId": "15",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820324/forest/633e4fb0c3c2cf6473ef5738.svg",
+      "name": "White Chrysanthemum",
+      "description": "These plants have beautiful white flowers. This plant usually blooms for several weeks and would be a perfect gift.",
+      "price": { "$numberDecimal": "25.00" },
+      "createdAt": { "$date": "2022-10-06T03:46:56Z" },
+      "lastModified": { "$date": "2022-10-06T03:46:56Z" }
+    },
+    {
+      "_id": { "$oid": "633e50a5c3c2cf6473ef5739" },
+      "productId": "16",
+      "imgUrl": "https://res.cloudinary.com/dnzud58qt/image/upload/c_scale,h_210,w_210/v1664820368/forest/633e50a5c3c2cf6473ef5739.svg",
+      "name": "Pink Orchid",
+      "description": "This plant is most notable for their three petal flowers. In order to maintain this plant, avoid over watering which can lead to root rot. Position this orchid in a bright area.  Avoid keeping orchids in cold spaces or hot areas.",
+      "price": { "$numberDecimal": "30.00" },
+      "createdAt": { "$date": "2022-10-06T03:51:01Z" },
+      "lastModified": { "$date": "2022-10-06T03:51:01Z" }
+    }
+  ]
+}

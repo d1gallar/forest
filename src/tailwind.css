@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    @apply appearance-none;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    max-width: unset;
+  }
+}
+
+;
+
+@layer components {
+
+  /* Skeleton Component */
+  .skeleton {
+    background-color: #ddd;
+    opacity: 0.8;
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  .skeleton.skeleton-text {
+    width: 100%;
+    height: 16px;
+  }
+
+  .skeleton.skeleton-thumbnail {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Loader Component */
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    margin: 8px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: rgb(102, 102, 102) transparent transparent transparent;
+  }
+
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Animation */
+  @keyframes skeleton-loading {
+    0% {
+      background-color: rgb(220, 220, 220)
+    }
+
+    100% {
+      background-color: rgb(255, 255, 255)
+    }
+  }
+}

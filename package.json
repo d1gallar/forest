@@ -1,0 +1,83 @@
+{
+  "name": "plant-shop",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@stripe/react-stripe-js": "^1.16.1",
+    "@stripe/stripe-js": "^1.46.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@types/jest": "^27.5.2",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/mongodb": "^4.0.7",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^18.7.23",
+    "@types/react": "^18.0.18",
+    "@types/uuid": "^8.3.4",
+    "@types/validator": "^13.7.10",
+    "axios": "^1.0.0",
+    "bcrypt": "^5.1.0",
+    "concurrently": "^7.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "i18n-iso-countries": "^7.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.5",
+    "morgan": "^1.10.0",
+    "postcss-cli": "^10.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "rimraf": "^3.0.2",
+    "stripe": "^11.4.0",
+    "ts-node": "^10.9.1",
+    "uuid": "^9.0.0",
+    "validator": "^13.7.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "preserve": "npm run tsc",
+    "tailwind:build": "npx tailwindcss build -o src/index.css",
+    "tailwind": "postcss ./src/tailwind.css -o ./public/css/styles.css",
+    "tailwind:watch": "postcss ./src/tailwind.css -o ./public/css/styles.css --watch",
+    "tsc": "rimraf dist && npx tsc",
+    "serve": "concurrently \"npx tsc\" \"nodemon --experimental-json-modules dist/server.js\" "
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.8.3"
+  }
+}

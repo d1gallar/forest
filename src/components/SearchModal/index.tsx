@@ -31,10 +31,6 @@ class SearchModal extends Component<SearchModalProps, SearchModalState> {
     this.setState({ query });
   }
 
-  componentDidUpdate(prevProps: Readonly<SearchModalProps>, prevState: Readonly<SearchModalState>, snapshot?: any): void {
-      console.log(this.state,this.props)
-  }
-
   renderModal() {
     return (
       <div className="bg-white w-full h-auto p-8 z-50 opacity-100">

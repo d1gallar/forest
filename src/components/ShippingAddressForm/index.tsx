@@ -122,7 +122,7 @@ export default class ShippingAddressForm extends Component<
     if (postal_code === "") errors["shipping_postalCode"] = "The ZIP is required.";
     if (country === "") errors["shipping_country"] = "The country is required.";
     const hasError = Object.entries(errors).length > 0;
-    console.log(this.state.errors)
+    // console.log(this.state.errors)
     this.setState({ hasError, errors });
   }
 
@@ -161,14 +161,14 @@ export default class ShippingAddressForm extends Component<
         });
         this.props.next();
       } catch (error) {
-        console.log(error)
+        // console.log(error)
       }
     }
   }
 
   render() {
     const { isBillingAddSame } = this.props.data;
-    console.log(this.props.data);
+    // console.log(this.props.data);
     return (
       <React.Fragment>
         <Heading level="2" title="Shipping" />

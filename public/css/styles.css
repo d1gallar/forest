@@ -524,6 +524,12 @@ video {
 .pointer-events-none{
   pointer-events: none;
 }
+.visible{
+  visibility: visible;
+}
+.invisible{
+  visibility: hidden;
+}
 .fixed{
   position: fixed;
 }
@@ -664,6 +670,9 @@ video {
 }
 .grid{
   display: grid;
+}
+.hidden{
+  display: none;
 }
 .aspect-square{
   aspect-ratio: 1 / 1;
@@ -958,6 +967,9 @@ video {
 .gap-5{
   gap: 1.25rem;
 }
+.overflow-x-auto{
+  overflow-x: auto;
+}
 .overflow-y-auto{
   overflow-y: auto;
 }
@@ -971,6 +983,10 @@ video {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.break-normal{
+  overflow-wrap: normal;
+  word-break: normal;
 }
 .break-words{
   overflow-wrap: break-word;
@@ -1395,11 +1411,6 @@ video {
 .opacity-30{
   opacity: 0.3;
 }
-.shadow-lg{
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1746,12 +1757,32 @@ img {
 }
 @media (min-width: 640px){
 
+  .sm\:visible{
+    visibility: visible;
+  }
+
+  .sm\:invisible{
+    visibility: hidden;
+  }
+
+  .sm\:flex{
+    display: flex;
+  }
+
+  .sm\:hidden{
+    display: none;
+  }
+
   .sm\:h-auto{
     height: auto;
   }
 
   .sm\:w-\[60vw\]{
     width: 60vw;
+  }
+
+  .sm\:w-\[14rem\]{
+    width: 14rem;
   }
 
   .sm\:w-\[33rem\]{
@@ -1764,6 +1795,10 @@ img {
 
   .sm\:flex-nowrap{
     flex-wrap: nowrap;
+  }
+
+  .sm\:justify-end{
+    justify-content: flex-end;
   }
 
   .sm\:gap-1{
@@ -1980,6 +2015,10 @@ img {
 
   .md\:gap-2{
     gap: 0.5rem;
+  }
+
+  .md\:gap-0{
+    gap: 0px;
   }
 
   .md\:gap-4{

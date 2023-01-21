@@ -31,7 +31,7 @@ class Login extends Component<{}, LoginState> {
         this.setState({ token: accessToken as string, isValidToken: true });
         // console.log("refresh token given...", accessToken);
       }
-      console.log(accessToken);
+      // console.log(accessToken);
     } catch (error) {
       this.setState({ isValidToken: false });
     }

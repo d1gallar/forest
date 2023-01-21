@@ -13,7 +13,7 @@ const getCartByUserId = async (userId: string) => {
     },
     
   });
-  console.log('response', response.data[0])
+  // console.log('response', response.data[0])
   return response.data[0] as ICart;
 };
 

@@ -161,7 +161,7 @@ class PasswordModal extends Component<PasswordModalProps, PasswordModalState> {
         const errorExists = Object.entries(responseErrors).length > 0;
         this.setState({ error: errorExists, errors: responseErrors });
       });
-      console.log(this.state)
+      // console.log(this.state)
       const updatedUser = await API_USER.getUserById(_id.toString()) as IUser;
       this.props.updateUser(updatedUser);
       if (!this.state.error) {

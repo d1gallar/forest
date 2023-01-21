@@ -85,7 +85,7 @@ class Product extends Component<{}, ProductState> {
       if (typeof userId !== "string") throw Error(JSON.stringify(userId));
       const cart = (await API_CART.getCartByUserId(userId as string).catch(
         (e: AxiosError) => {
-          console.log(e.response?.data);
+          // console.log(e.response?.data);
         }
       )) as ICart;
       this.setState({ cart });
@@ -95,7 +95,7 @@ class Product extends Component<{}, ProductState> {
         currentProduct.price,
         quantity
       ).catch((e: AxiosError) => {
-        console.log(e.response?.data);
+        // console.log(e.response?.data);
       })) as ICart;
       this.setState({ cart: updatedCart, isFetching: false, isSuccess: true });
     } catch (error) {

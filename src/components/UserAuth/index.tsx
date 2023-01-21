@@ -57,7 +57,7 @@ const UserAuth: React.FC<{ children: JSX.Element }> = ({ children }) => {
       userId &&
       fetchUser(userId)
         .then((response) => {
-          console.log("user", response);
+          // console.log("user", response);
           if (response instanceof HTTPRequestError) throw response;
           const user = response as IUser;
           setUser(user);
@@ -69,7 +69,7 @@ const UserAuth: React.FC<{ children: JSX.Element }> = ({ children }) => {
           }
           setError(err);
         });
-    console.log({ token, userId, user });
+    // console.log({ token, userId, user });
   }, []);
 
   if (error) console.log(error);

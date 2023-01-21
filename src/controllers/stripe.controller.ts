@@ -71,9 +71,9 @@ const handleSuccessfulPaymentIntent = async (paymentIntent: PaymentIntent) => {
   } catch (error) {
     if(error instanceof HTTPRequestError) {
       const httpError = error as HTTPRequestError;
-      console.log(httpError, httpError.errors)
+      // console.log(httpError, httpError.errors)
     }
-    console.log(error);
+    // console.log(error);
   }
   return;
 };
@@ -127,7 +127,7 @@ export const confirmPaymentIntent: RequestHandler = async (req, res) => {
       confirmParams
     );
     if (!confirmedPaymentIntent) throw stripePaymentFailed;
-    console.log("confirmed", confirmedPaymentIntent);
+    // console.log("confirmed", confirmedPaymentIntent);
     return res.status(200).json({
       clientSecret: confirmedPaymentIntent.client_secret,
       paymentId: confirmedPaymentIntent.id,

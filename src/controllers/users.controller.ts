@@ -126,7 +126,7 @@ export const updateUserPartial: RequestHandler = async (req, res) => {
   const { id } = req.params;
   const { currentPassword, ...fields } = req.body;
   const user = (req as GetUserAuthRequest).user;
-  console.log(req.body);
+  // console.log(req.body);
   try {
     if (id && !ObjectId.isValid(id))  throw invalidUserId;
     if (user && id && id !== user._id.toString()) throw unauthorizedEdit;
@@ -149,7 +149,7 @@ export const updateUserPartial: RequestHandler = async (req, res) => {
         runValidators: true,
       }
     );
-    console.log(req.body, updateUser);
+    // console.log(req.body, updateUser);
     return res.status(200).json(updatedUser);
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {

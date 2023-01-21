@@ -30,7 +30,7 @@ class SearchBar extends Component<SearchProps, SearchState> {
       (e.ctrlKey && e.code === "KeyF") ||
       (e.metaKey && e.code === "KeyF")
     ) {
-      console.log("Search: ", this.state.input);
+      // console.log("Search: ", this.state.input);
       this.handleSubmit();
       this.setState({ input: "" });
     }

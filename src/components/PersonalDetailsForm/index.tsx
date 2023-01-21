@@ -45,14 +45,11 @@ export default class PersonalDetailsForm extends Component<
     await this.setState({ errors, hasError });
   }
 
-  componentDidMount(): void {
-    console.log("personal", this.state.errors);
-  }
 
   async handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     await this.handleErrors();
-    console.log(this.state.errors);
+    // console.log(this.state.errors);
     if (!this.state.hasError) {
       this.props.next();
     }

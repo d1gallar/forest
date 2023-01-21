@@ -48,7 +48,7 @@ export const getAddressById: RequestHandler = async (req, res) => {
   try {
     if (id && !ObjectId.isValid(id)) throw invalidAddressId;
     const address = await Address.findById({ _id: id });
-    console.log(user._id, address?.userId);
+    // console.log(user._id, address?.userId);
     if (id && address && id !== address.userId.toString())
       throw unauthorizedAccess;
     if (!address) throw addressNotFound;
@@ -109,7 +109,7 @@ export const deleteAddress: RequestHandler = async (req, res) => {
     )
       throw unauthorizedAccess;
     const deletedAddress = await Address.deleteOne({ _id: id });
-    console.log(id, "deleted:", deleteAddress);
+    // console.log(id, "deleted:", deleteAddress);
     const userAddresses = await Address.find({
       userId: addressToDelete.userId,
     });
@@ -215,7 +215,7 @@ export const updateAddressPartial: RequestHandler = async (req, res) => {
 // @access Private
 export const updateDefaultAddress: RequestHandler = async (req, res, next) => {
   const { userId, id } = req.body;
-  console.log("updateDefaultAddress", id, userId);
+  // console.log("updateDefaultAddress", id, userId);
   const user = (req as GetUserAuthRequest).user as IUser;
   try {
     if (!userId || !ObjectId.isValid(userId)) throw invalidUserId;

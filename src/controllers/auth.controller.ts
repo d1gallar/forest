@@ -63,7 +63,7 @@ export const login: RequestHandler = async (req, res) => {
         expiresIn: REFRESH_EXPIRES_IN,
       }
     );
-    console.log("access", accessToken, "refresh", refreshToken);
+    // console.log("access", accessToken, "refresh", refreshToken);
 
     // Creates secure cookie with refresh token
     res.cookie("jwt", refreshToken, {
@@ -97,7 +97,7 @@ export const login: RequestHandler = async (req, res) => {
 // @access Public
 export const register: RequestHandler = async (req, res) => {
   const { password, ...rest } = req.body;
-  console.log(req.body);
+  // console.log(req.body);
   try {
     // Mongoose Validations
     const validateError = new User(req.body).validateSync();
@@ -125,7 +125,7 @@ export const register: RequestHandler = async (req, res) => {
     const accessToken = generateAccessToken(user);
     return res.status(200).send({ accessToken });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     // Mongoose Validation Error
     if (error instanceof mongoose.Error.ValidationError) {
       const validatorError = validatorFormatter(

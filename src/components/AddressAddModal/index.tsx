@@ -125,7 +125,7 @@ class AddressAddModal extends Component<
         isDefault: this.state.defaultAddress,
       } as IAddress;
       await API_ADDRESS.createAddress(newAddress);
-      console.log("valid submission", this.state, newAddress);
+      // console.log("valid submission", this.state, newAddress);
       const updatedAddresses = await API_ADDRESS.getAddressesByUserId(
         user._id.toString()
       );

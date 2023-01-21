@@ -100,10 +100,10 @@ class RegisterForm extends Component<{}, RegisterFormState> {
     await this.handleFormErrors();
     if (!this.state.isError) {
       const { isError, errors, isSuccess, ...fields } = this.state;
-      console.log("submission", fields);
+      // console.log("submission", fields);
       const token = await API_AUTH.register(fields).catch((e) => {
         const errors = e.response.data.errors;
-        console.log('error',e.response.data)
+        // console.log('error',e.response.data)
         const responseErrors = { ...errors, ...this.state.errors };
         const errorExists = Object.entries(responseErrors).length > 0;
         this.setState({ isError: errorExists, errors: responseErrors });

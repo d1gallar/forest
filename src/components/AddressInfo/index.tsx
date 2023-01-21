@@ -38,7 +38,7 @@ class AddressInfo extends Component<AddressInfoProps, {}> {
         const responseAddresses = updatedAddresses as IAddress[];
         this.props.updateAddresses(responseAddresses);
       }
-      console.log('delete',deletedAddress,updatedAddresses);
+      // console.log('delete',deletedAddress,updatedAddresses);
     }
   }
 

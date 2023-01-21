@@ -202,7 +202,7 @@ export default class CheckoutForm extends Component<
         this.setState({ clientSecret, paymentId });
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
 

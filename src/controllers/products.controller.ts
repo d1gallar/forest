@@ -15,7 +15,7 @@ import {
 // @access Public
 export const getProducts: RequestHandler = async (req, res) => {
   const query = req.query;
-  console.log(query)
+  // console.log(query)
   try {
     const products = await Product.find(query);
     if (!products || products.length === 0) return res.status(200).send([]);
@@ -143,7 +143,7 @@ export const updateProductPartial: RequestHandler = async (req, res) => {
         runValidators: true,
       }
     );
-    console.log(req.body, updatedProduct);
+    // console.log(req.body, updatedProduct);
     return res.status(200).json(updatedProduct);
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {

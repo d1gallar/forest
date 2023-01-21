@@ -38,7 +38,7 @@ class DeleteAccountModal extends Component<
     if(this.isValidSubmit() && user){
       const {_id} = user;
       const deletedUser = await API_USER.deleteUser(_id.toString());
-      console.log("deleted", deletedUser);
+      // console.log("deleted", deletedUser);
       await API_AUTH.logout();
       this.props.updateToken(null);
       this.setState({isSuccess: true});

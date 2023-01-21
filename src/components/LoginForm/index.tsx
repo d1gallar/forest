@@ -81,7 +81,7 @@ class LoginForm extends Component<{}, LoginFormState> {
       const { email, password } = this.state;
       const fields = { email, password };
       this.setState({ isFetching: true });
-      console.log("Logging in..", fields);
+      // console.log("Logging in..", fields);
       const response = (await API_AUTH.login(fields)) as
         | { accessToken: string, user: IUser }
         | HTTPRequestError;
@@ -90,7 +90,7 @@ class LoginForm extends Component<{}, LoginFormState> {
         Object.keys(response).includes("success")
       ) {
         const typedError = response as HTTPRequestError;
-        console.log("Error!", typedError);
+        // console.log("Error!", typedError);
         const errors = typedError.errors;
         const responseErrors = { ...errors, ...this.state.errors };
         const errorExists = Object.entries(responseErrors).length > 0;
@@ -98,7 +98,7 @@ class LoginForm extends Component<{}, LoginFormState> {
       } else if(Object.keys(response).includes("accessToken")){
         const tokenResponse = response as {accessToken: string};
         const accessToken = tokenResponse.accessToken;
-        console.log({accessToken})
+        // console.log({accessToken})
         this.setState({ isSuccess: true, isError: false});
       }
     }

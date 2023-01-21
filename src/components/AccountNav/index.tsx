@@ -17,7 +17,7 @@ export default class AccountNav extends Component<{}, AccountNavState> {
     const myOrders = this.state.path === "/orders";
     const myLiked = this.state.path === "/likes";
     return (
-      <div className="w-full flex flex-row justify-start gap-6">
+      <div className="w-full flex flex-row justify-start gap-6 overflow-x-auto break-normal">
         <Link to={"/account"}>
           <Heading
             level="1"

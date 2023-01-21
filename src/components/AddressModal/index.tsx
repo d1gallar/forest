@@ -107,7 +107,7 @@ class AddressModal extends Component<AddressModalProps, AddressModalState> {
       const filterField = {
         ...Object.fromEntries(filteredFieldArr),
       };
-      console.log("valid submission", this.state, filterField);
+      // console.log("valid submission", this.state, filterField);
       await API_ADDRESS.updateAddressPartial(_id.toString(), filterField);
       const updatedAddresses = await API_ADDRESS.updateDefaultAddress(
         this.props.user._id.toString(),

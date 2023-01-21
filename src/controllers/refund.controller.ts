@@ -113,7 +113,7 @@ export const deleteRefund: RequestHandler = async (req, res) => {
     )
       throw unauthorizedAccess;
     const deletedRefund = await Refund.deleteOne({ _id: id });
-    console.log(id, "deleted:", deletedRefund);
+    // console.log(id, "deleted:", deletedRefund);
     return res.status(200).json(deletedRefund);
   } catch (error) {
     if (error instanceof HTTPRequestError) {

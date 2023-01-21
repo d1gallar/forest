@@ -13,19 +13,19 @@ const BASE_URL = process.env.PUBLIC_URL;
 
 const calculateQuantityPerItem = (items: ICartItem[]) => {
   let totalItems = 0;
-  items.forEach(item => {
-    totalItems += item.quantity
-  })
-  if(totalItems > 99) return "99+";
+  items.forEach((item) => {
+    totalItems += item.quantity;
+  });
+  if (totalItems > 99) return "99+";
   return totalItems.toString();
-}
+};
 
 type NavProp = {
   handleSearch: (toggleSearch: boolean) => void;
 };
 
 type NavState = {
-  width: Number;
+  width: number;
   collapse: boolean;
   cart: ICartLoad;
 };
@@ -41,55 +41,18 @@ class Navbar extends Component<NavProp, NavState> {
     this.handleResize = this.handleResize.bind(this);
   }
 
-  renderInnerTabs() {
-    if (this.state.width < SM_BREAKPT) return null;
-    return (
-      <div className="flex justify-between items-center font-Inter text-sm font-medium">
-        <NavTab path="/" name="Home" />
-        <NavTab path="/shop" name="Shop" />
-        <NavTab path="/contact" name="Contact" />
-      </div>
-    );
-  }
-
-  renderAccount() {
-    if (this.state.width < SM_BREAKPT) return null;
-    return (
-      <Link to="/account">
-        <img
-          className="scale-125 md:scale-100"
-          src={`${BASE_URL}/assets/user-account.svg`}
-          alt="User Account Icon"
-        />
-      </Link>
-    );
-  }
-
-  renderCollapse() {
+  toggleCollapse() {
     this.setState({ collapse: !this.state.collapse });
-  }
-
-  renderHamburger() {
-    if (this.state.width > SM_BREAKPT) return null;
-    return (
-      <button onClick={() => this.renderCollapse()}>
-        <img
-          className="scale-125 md:scale-100"
-          src={`${BASE_URL}/assets/bar-icon.svg`}
-          alt="Collapsable Icon"
-        />
-      </button>
-    );
   }
 
   async componentDidMount() {
     window.addEventListener("resize", this.handleResize);
     const userId = await API_AUTH.getUserId();
     if (typeof userId !== "string") return;
-    console.log("userId", userId);
-    const cart = await API_CART.getCartByUserId((userId as string).toString());
+    // console.log("userId", userId);
+    const cart = await API_CART.getCartByUserId(userId.toString());
     this.setState({ cart });
-    console.log(cart);
+    // console.log(cart);
   }
 
   handleResize() {
@@ -101,21 +64,19 @@ class Navbar extends Component<NavProp, NavState> {
     return (
       <React.Fragment>
         <nav className="w-full">
-          <div
-            className={`bg-white flex justify-between w-full h-16 md:h-12 z-50 ${
-              this.state.collapse ? "" : "shadow-lg shadow-black-500"
-            }`}
-          >
+          <div className="bg-white flex justify-between w-full h-16 md:h-12 z-50">
             <Link
               to="/"
               className="flex justify-between gap-2.5 items-center pl-12 flex-grow-0 shrink-0"
             >
               <span>
-                <img
-                  className="scale-125 md:scale-100"
-                  src={`${BASE_URL}/assets/plant-logo.svg`}
-                  alt="Forest Leaf Logo"
-                />
+                <i>
+                  <img
+                    className="scale-125 md:scale-100"
+                    src={`${BASE_URL}/assets/plant-logo.svg`}
+                    alt="Forest Leaf Logo"
+                  />
+                </i>
               </span>
               <span>
                 <p className="font-SansThai text-black font-medium leading-5 text-2xl md:text-lg">
@@ -123,7 +84,11 @@ class Navbar extends Component<NavProp, NavState> {
                 </p>
               </span>
             </Link>
-            {this.renderInnerTabs()}
+            <div className="invisible hidden sm:visible sm:flex justify-between items-center font-Inter text-sm font-medium">
+              <NavTab path="/" name="Home" />
+              <NavTab path="/shop" name="Shop" />
+              <NavTab path="/contact" name="Contact" />
+            </div>
             <div className="flex justify-end items-center gap-6 pr-12">
               <SearchButton handleSearch={this.props.handleSearch} />
               <div className="relative">
@@ -142,16 +107,30 @@ class Navbar extends Component<NavProp, NavState> {
                   )}
                 </Link>
               </div>
-              {this.renderAccount()}
-              {this.renderHamburger()}
+              <Link
+                to="/account"
+                className="invisible hidden sm:visible sm:flex"
+              >
+                <img
+                  className="scale-125 md:scale-100"
+                  src={`${BASE_URL}/assets/user-account.svg`}
+                  alt="User Account Icon"
+                />
+              </Link>
+              <button
+                onClick={() => this.toggleCollapse()}
+                className="visible sm:hidden sm:invisible"
+              >
+                <img
+                  className="scale-125 md:scale-100"
+                  src={`${BASE_URL}/assets/bar-icon.svg`}
+                  alt="Collapsable Icon"
+                />
+              </button>
             </div>
           </div>
           {this.state.collapse && (
-            <div
-              className={`w-full h-fit flex flex-col bg-white ${
-                this.state.collapse ? "shadow-lg shadow-black-500" : ""
-              }`}
-            >
+            <div className={`w-full h-fit flex flex-col bg-white`}>
               <div className="w-full flex flex-row justify-center items-center p-5 font-medium text-lg text-[#0000003f]">
                 <NavTab path="/" name="Home" />
               </div>

@@ -100,7 +100,7 @@ export default class PaymentInfoForm extends Component<
   }
 
   handlePayment(e: StripePaymentElementChangeEvent) {
-    console.log(e.value.type)
+    // console.log(e.value.type)
     this.setState({ paymentType: e.value.type });
   }
 
@@ -269,18 +269,14 @@ export default class PaymentInfoForm extends Component<
       }
     } else {
       const {errors, hasError} = this.state;
-      console.log('submit', errors, hasError)
+      // console.log('submit', errors, hasError)
       await this.setState({ errors, hasError, showBanner: true });
     }
   }
 
-  componentDidUpdate(prevProps: Readonly<PaymentInfoFormProps>, prevState: Readonly<PaymentInfoFormState>, snapshot?: any): void {
-      console.log(this.state)
-  }
-
   render() {
     const { isFetching } = this.state;
-    console.log(this.props.paymentId)
+    // console.log(this.props.paymentId)
     return (
       <React.Fragment>
         {this.state.showBanner && this.state.hasError ? (

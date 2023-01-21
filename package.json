@@ -54,7 +54,7 @@
     "tailwind": "postcss ./src/tailwind.css -o ./public/css/styles.css",
     "tailwind:watch": "postcss ./src/tailwind.css -o ./public/css/styles.css --watch",
     "tsc": "rimraf dist && npx tsc",
-    "serve": "concurrently \"npx tsc\" \"nodemon --experimental-json-modules dist/server.js\" "
+    "server": "concurrently \"npx tsc\" \"nodemon --experimental-json-modules dist/server.js\" "
   },
   "eslintConfig": {
     "extends": [

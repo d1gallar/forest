@@ -37,18 +37,18 @@ export default class OrderConfirmation extends Component<
     let paramString = window.location.href.split("?")[1];
     let queryString = new URLSearchParams(paramString);
     const paymentId = queryString.get("payment_intent") as string;
-    console.log(paymentId);
+    // console.log(paymentId);
     try {
       this.setState({ isFetching: true });
       const userId = await API_AUTH.getUserId();
-      console.log(userId);
+      // console.log(userId);
       if (typeof userId === "string") {
         const order = (await API_ORDER.getCompletedOrder(
           userId,
           paymentId
         )) as IOrder;
         this.setState({ order, isSuccess: true });
-        console.log(order);
+        // console.log(order);
       } else {
         throw new Error("Failed to retrieve userId.");
       }

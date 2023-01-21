@@ -61,7 +61,7 @@ class Cart extends Component<{}, CartState> {
       this.setState({ isFetching: false });
     } catch (error) {
       const httpError = error as HTTPRequestError;
-      console.log(httpError);
+      // console.log(httpError);
       this.setState({ error: httpError });
     }
   }

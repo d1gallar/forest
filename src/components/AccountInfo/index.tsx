@@ -122,7 +122,7 @@ class AccountInfo extends Component<AccountInfoProps, {}> {
             </p>
           </div>
           <div className="w-full">{this.renderAddressList()}</div>
-          <div className="w-full flex justify-end">
+          <div className="w-full flex justify-center sm:justify-end">
             <button
               type="button"
               onClick={this.props.openAddAddress}
@@ -132,20 +132,22 @@ class AccountInfo extends Component<AccountInfoProps, {}> {
             </button>
           </div>
         </div>
-        <div className="w-full h-fit flex flex-row justify-between bg-white p-8 rounded-[10px] mb-6">
+        <div className="w-full h-fit flex justify-between bg-white p-8 rounded-[10px] mb-6 flex-col gap-6 md:flex-row md:gap-0">
           <p
-            className="font-Inter text-xl font-semibold
+            className="w-full font-Inter text-xl font-semibold
         "
           >
             Delete Account
           </p>
-          <button
-            type="button"
-            onClick={this.props.openDeleteAccount}
-            className="bg-black hover:bg-[#252525] px-6 py-2 rounded-[50px] text-white w-fit"
-          >
-            Delete
-          </button>
+          <div className="w-full flex justify-center sm:justify-end">
+            <button
+              type="button"
+              onClick={this.props.openDeleteAccount}
+              className="bg-black hover:bg-[#252525] px-6 py-2 rounded-[50px] text-white w-fit h-fit"
+            >
+              Delete
+            </button>
+          </div>
         </div>
         <div className="flex flex-row justify-center items-center">
           <button

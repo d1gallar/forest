@@ -190,7 +190,7 @@ class Account extends Component<{}, AccountState> {
         const axiosError = error as AxiosError;
         if (axiosError.response) {
           const httpError = axiosError.response.data as HTTPRequestError;
-          console.log("Failed to fetch...", axiosError.response.data);
+          // console.log("Failed to fetch...", axiosError.response.data);
           this.setState({ error: httpError });
         }
         this.setState({ error: error as HTTPRequestError });

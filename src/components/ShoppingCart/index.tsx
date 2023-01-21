@@ -47,13 +47,13 @@ class ShoppingCart extends Component<CartProps, CartState> {
         this.handleCartChange(typedCart);
       }
     } catch (error) {
-      console.log(error); 
+      // console.log(error); 
     }
   }
 
   async handleDelete(index: number, _id: string) {
     const { user } = this.props;
-    console.log("clicked")
+    // console.log("clicked")
     try {
       const updatedCart = await API_CART.removeItemFromCart(
         user._id.toString(),
@@ -64,7 +64,7 @@ class ShoppingCart extends Component<CartProps, CartState> {
         this.handleCartChange(typedCart);
       }
     } catch (error) {
-      console.log(error)
+      // console.log(error)
     }
   }
 
@@ -77,19 +77,11 @@ class ShoppingCart extends Component<CartProps, CartState> {
       if (Object.keys(cart).includes("_id")) {
         const typedCart = cart as ICart;
         this.handleCartChange(typedCart);
-        console.log("Fetched cart...",cart);
+        // console.log("Fetched cart...",cart);
       }
     } catch (error) {
-      console.log(error)
+      // console.log(error)
     }
-  }
-
-  componentDidUpdate(
-    prevProps: Readonly<{}>,
-    prevState: Readonly<CartState>,
-    snapshot?: any
-  ): void {
-    console.log("state", this.state);
   }
 
   renderCheckoutBtn() {
@@ -126,7 +118,7 @@ class ShoppingCart extends Component<CartProps, CartState> {
         </p>
       );
     }
-    console.log("Fetching products...", products);
+    // console.log("Fetching products...", products);
     return (
       <React.Fragment>
         {products.map((item, i) => {

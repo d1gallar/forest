@@ -46,7 +46,7 @@ const register = async (fields: Object) => {
         },
       }
     );
-    console.log('register',response.data);
+    // console.log('register',response.data);
     localStorage.setItem("user", JSON.stringify(response.data["accessToken"]));
     return response.data["accessToken"] as string;
   } catch (error) {

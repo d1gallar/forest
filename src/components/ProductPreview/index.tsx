@@ -15,7 +15,7 @@ class ProductPreview extends Component<ProductPreviewProps> {
     if (!product) return <SkeletonProduct />;
     const { productId, name, imgUrl, price } = product;
     return (
-      <div className="w-full flex flex-col h-fit gap-5 hover:pointer md:scale-95 md:hover:scale-100 transition-transform duration-100 base:w-[16rem]">
+      <div className="w-full flex flex-col h-fit gap-5 hover:pointer md:scale-95 md:hover:scale-100 transition-transform duration-100 sm:w-[14rem] base:w-[16rem]">
         {!imgUrl ? (
           <SkeletonImg />
         ) : (

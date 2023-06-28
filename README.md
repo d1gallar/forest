@@ -1,6 +1,7 @@
 # Forest Ecommerce Website
 
-![forest-showcase](https://github.com/d1gallar/forest/assets/49170814/44397703-42c4-44a1-a3c1-dd80a9ee5a66)
+![forest-showcase](https://github.com/d1gallar/forest/assets/49170814/fd7cf161-194e-4c3d-b710-0642856501fc)
+
 
 ## 📄 Description
 
